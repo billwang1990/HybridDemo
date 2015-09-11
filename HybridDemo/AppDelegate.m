@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     
     BaseWebViewController *rootVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
-    rootVC.urlStr = @"http://www.baidu.com/";
+    rootVC.urlStr = @"http://www.ourbala.com/";
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
     self.window.rootViewController = nav;

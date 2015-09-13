@@ -10,6 +10,7 @@
 #import "BaseWebViewController.h"
 
 #define kRootURL @"http://www.ourbala.com/"
+#define kBaiduURL @"http://www.baidu.com/"
 
 @interface AppDelegate ()
 

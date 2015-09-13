@@ -9,6 +9,9 @@
 #import "BaseWebViewController.h"
 #import "UIWebView+AddJavaScriptInterface.h"
 #import "AppDelegate.h"
+#import "URLParser.h"
+
+#define kNewStartWebKey @""
 
 @interface BaseWebViewController ()<UIWebViewDelegate>
 
@@ -57,7 +60,7 @@
 #pragma mark UIWebView Delegate
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    
+    [self showIndicatorWithContent:@"请稍候"];
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -71,10 +74,15 @@
     }
     
     if (![url.host isEqualToString:currUrl.host] || ![url.path isEqualToString:currUrl.path]) {
+        
+        
         BaseWebViewController *childVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
         childVC.urlStr = request.URL.absoluteString;
         
-        if ([childVC.urlStr rangeOfString:@"killSelf"].location != NSNotFound) {
+        URLParser *parse = [[URLParser alloc]initWithURLString:childVC.urlStr];
+        NSString *val = [parse valueForVariable:@"newPage"];
+
+        if ([val isEqualToString:@"true"]) {
             [self performSelector:@selector(changeToRootVC:) withObject:childVC afterDelay:0.5];
             return NO;
         }
@@ -88,20 +96,25 @@
                 UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:childVC];
                 [self presentViewController:nav animated:YES completion:nil];
             }
-            
+            return NO;
         }
 
-        return NO;
     }
     
     return YES;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [self hideIndicator];
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [self hideIndicator];
+    
+    self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+}
 
 - (void)changeToRootVC:(UIViewController*)vc
 {

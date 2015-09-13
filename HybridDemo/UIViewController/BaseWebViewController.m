@@ -8,11 +8,11 @@
 
 #import "BaseWebViewController.h"
 #import "UIWebView+AddJavaScriptInterface.h"
+#import "AppDelegate.h"
 
 @interface BaseWebViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
-
 //private
 @property (nonatomic, strong) NSURLConnection *connection;
 
@@ -73,15 +73,24 @@
     if (![url.host isEqualToString:currUrl.host] || ![url.path isEqualToString:currUrl.path]) {
         BaseWebViewController *childVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
         childVC.urlStr = request.URL.absoluteString;
-        if (self.navigationController) {
-            [self.navigationController pushViewController:childVC animated:YES];
+        
+        if ([childVC.urlStr rangeOfString:@"killSelf"].location != NSNotFound) {
+            [self performSelector:@selector(changeToRootVC:) withObject:childVC afterDelay:0.5];
+            return NO;
         }
         else
         {
-            UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:childVC];
-            [self presentViewController:nav animated:YES completion:nil];
+            if (self.navigationController) {
+                [self.navigationController pushViewController:childVC animated:YES];
+            }
+            else
+            {
+                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:childVC];
+                [self presentViewController:nav animated:YES completion:nil];
+            }
+            
         }
-        
+
         return NO;
     }
     
@@ -91,6 +100,15 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+}
+
+
+- (void)changeToRootVC:(UIViewController*)vc
+{
+    AppDelegate *del = [UIApplication sharedApplication].delegate;
+    
+    del.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
+    [del.window makeKeyAndVisible];
 }
 
 #pragma mark NSURLConnection

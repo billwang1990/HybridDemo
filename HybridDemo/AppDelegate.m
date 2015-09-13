@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "BaseWebViewController.h"
 
+#define kRootURL @"http://www.ourbala.com/"
+
 @interface AppDelegate ()
 
 @end
@@ -20,7 +22,7 @@
     // Override point for customization after application launch.
     
     BaseWebViewController *rootVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
-    rootVC.urlStr = @"http://www.ourbala.com/";
+    rootVC.urlStr = kRootURL;
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
     self.window.rootViewController = nav;

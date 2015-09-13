@@ -210,6 +210,7 @@
 				TargetAttributes = {
 					18D9CC2F1B8C196100C79C59 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = K28PMLN2Q3;
 					};
 					18D9CC481B8C196100C79C59 = {
 						CreatedOnToolsVersion = 6.4;
@@ -347,9 +348,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "11aae0d9-f6aa-4b2e-88bc-cf5b95b23753";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -384,8 +386,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "11aae0d9-f6aa-4b2e-88bc-cf5b95b23753";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -395,9 +398,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = HybridDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3f14218-33ba-45cf-b509-c5809c6e2997";
 			};
 			name = Debug;
 		};
@@ -405,9 +411,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: qi ming Dong (K28PMLN2Q3)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: qi ming Dong (K28PMLN2Q3)";
 				INFOPLIST_FILE = HybridDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3f14218-33ba-45cf-b509-c5809c6e2997";
 			};
 			name = Release;
 		};
@@ -464,6 +473,7 @@
 				18D9CC551B8C196100C79C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D9CC561B8C196100C79C59 /* Build configuration list for PBXNativeTarget "HybridDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +482,7 @@
 				18D9CC581B8C196100C79C59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

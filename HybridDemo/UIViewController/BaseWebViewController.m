@@ -124,6 +124,13 @@
     [del.window makeKeyAndVisible];
 }
 
+- (void)setRightNavBarItems:(NSArray *)items
+{
+    if (items) {
+        
+    }
+}
+
 #pragma mark NSURLConnection
 
 #pragma mark connection delegate

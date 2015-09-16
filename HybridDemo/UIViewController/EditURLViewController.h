@@ -8,6 +8,9 @@
 
 
 #import "BaseViewController.h"
+
 @interface EditURLViewController : BaseViewController
+
+@property (nonatomic, copy) void (^completeBlk)(void);
 
 @end

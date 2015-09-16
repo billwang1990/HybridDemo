@@ -12,4 +12,6 @@
 
 @property (nonatomic, copy) NSString *urlStr;
 
+- (void)setRightNavBarItems:(NSArray*)items;
+
 @end

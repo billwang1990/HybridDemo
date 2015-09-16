@@ -8,12 +8,10 @@
 
 #import "AppDelegate.h"
 #import "BaseWebViewController.h"
-
-#define kRootURL @"http://www.ourbala.com/"
-#define kBaiduURL @"http://www.baidu.com/"
+#import "CommonUtil.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, assign) NSTimeInterval interval;
 @end
 
 @implementation AppDelegate
@@ -23,7 +21,7 @@
     // Override point for customization after application launch.
     
     BaseWebViewController *rootVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
-    rootVC.urlStr = kRootURL;
+    rootVC.urlStr = [CommonUtil baseURL];
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:rootVC];
     self.window.rootViewController = nav;
@@ -52,6 +50,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark Motion Detect
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    self.interval = [NSDate timeIntervalSinceReferenceDate];
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    self.interval = [NSDate timeIntervalSinceReferenceDate];
+    if ([NSDate timeIntervalSinceReferenceDate] - self.interval > 3600) {
+       //TODO:
+    }
 }
 
 @end

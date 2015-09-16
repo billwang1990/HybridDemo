@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>96B2763E2725AB370355E817AAEC6085</key>
+		<key>9AFE1EA0B14633861FAE98EDDC90BC53</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECD0931E3167BD2023DE45E184265021</key>
+		<key>D47C444354C18C15ADC92995D5F9AA8C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8844010D93BFA77FD314C04BFCEDA1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

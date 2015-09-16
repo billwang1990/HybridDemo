@@ -20,6 +20,9 @@
 		18D9CC641B8C573700C79C59 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9CC631B8C573700C79C59 /* BaseViewController.m */; };
 		18D9CC691B8C580B00C79C59 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D9CC671B8C580B00C79C59 /* BaseWebViewController.m */; };
 		18D9CC6A1B8C580B00C79C59 /* BaseWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D9CC681B8C580B00C79C59 /* BaseWebViewController.xib */; };
+		C8365E331BA96F4E0013CBE2 /* EditURLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8365E321BA96F4E0013CBE2 /* EditURLViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C8365E361BA971CC0013CBE2 /* UINavigationItem+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C8365E351BA971CC0013CBE2 /* UINavigationItem+Addition.m */; settings = {ASSET_TAGS = (); }; };
+		C8365E391BA9728A0013CBE2 /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C8365E381BA9728A0013CBE2 /* CommonUtil.m */; settings = {ASSET_TAGS = (); }; };
 		C8A04B881BA5A63400208FA4 /* URLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A04B871BA5A63400208FA4 /* URLParser.m */; settings = {ASSET_TAGS = (); }; };
 		EE5F0D71956DE152BBD04740 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053D96A55F768A40BC50331B /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,12 @@
 		18D9CC681B8C580B00C79C59 /* BaseWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BaseWebViewController.xib; path = UIViewController/BaseWebViewController.xib; sourceTree = "<group>"; };
 		3DA25563F0AABF1C0FFDB062 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		76CABCA7AFB062A8E7CC4A9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C8365E311BA96F4E0013CBE2 /* EditURLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditURLViewController.h; path = UIViewController/EditURLViewController.h; sourceTree = "<group>"; };
+		C8365E321BA96F4E0013CBE2 /* EditURLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditURLViewController.m; path = UIViewController/EditURLViewController.m; sourceTree = "<group>"; };
+		C8365E341BA971CC0013CBE2 /* UINavigationItem+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Addition.h"; sourceTree = "<group>"; };
+		C8365E351BA971CC0013CBE2 /* UINavigationItem+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Addition.m"; sourceTree = "<group>"; };
+		C8365E371BA9728A0013CBE2 /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonUtil.h; path = Service/CommonUtil.h; sourceTree = "<group>"; };
+		C8365E381BA9728A0013CBE2 /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtil.m; path = Service/CommonUtil.m; sourceTree = "<group>"; };
 		C8A04B861BA5A63400208FA4 /* URLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLParser.h; sourceTree = "<group>"; };
 		C8A04B871BA5A63400208FA4 /* URLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,9 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				18D9CC651B8C574100C79C59 /* BaseViewController */,
+				C8365E3A1BA972910013CBE2 /* Service */,
 				18D9CC611B8C568200C79C59 /* Core */,
 				18D9CC371B8C196100C79C59 /* AppDelegate.h */,
 				18D9CC381B8C196100C79C59 /* AppDelegate.m */,
+				C8365E311BA96F4E0013CBE2 /* EditURLViewController.h */,
+				C8365E321BA96F4E0013CBE2 /* EditURLViewController.m */,
 				C8A04B861BA5A63400208FA4 /* URLParser.h */,
 				C8A04B871BA5A63400208FA4 /* URLParser.m */,
 				18D9CC3A1B8C196100C79C59 /* ViewController.h */,
@@ -166,6 +178,8 @@
 			children = (
 				18D9CC621B8C573700C79C59 /* BaseViewController.h */,
 				18D9CC631B8C573700C79C59 /* BaseViewController.m */,
+				C8365E341BA971CC0013CBE2 /* UINavigationItem+Addition.h */,
+				C8365E351BA971CC0013CBE2 /* UINavigationItem+Addition.m */,
 				18D9CC661B8C580B00C79C59 /* BaseWebViewController.h */,
 				18D9CC671B8C580B00C79C59 /* BaseWebViewController.m */,
 				18D9CC681B8C580B00C79C59 /* BaseWebViewController.xib */,
@@ -180,6 +194,15 @@
 				3DA25563F0AABF1C0FFDB062 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8365E3A1BA972910013CBE2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C8365E371BA9728A0013CBE2 /* CommonUtil.h */,
+				C8365E381BA9728A0013CBE2 /* CommonUtil.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 		D9AEA395908BB30AB1907001 /* Frameworks */ = {
@@ -328,11 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8365E361BA971CC0013CBE2 /* UINavigationItem+Addition.m in Sources */,
 				18D9CC5E1B8C567B00C79C59 /* UIWebView+AddJavaScriptInterface.m in Sources */,
 				18D9CC691B8C580B00C79C59 /* BaseWebViewController.m in Sources */,
 				18D9CC641B8C573700C79C59 /* BaseViewController.m in Sources */,
 				18D9CC3C1B8C196100C79C59 /* ViewController.m in Sources */,
 				18D9CC391B8C196100C79C59 /* AppDelegate.m in Sources */,
+				C8365E391BA9728A0013CBE2 /* CommonUtil.m in Sources */,
+				C8365E331BA96F4E0013CBE2 /* EditURLViewController.m in Sources */,
 				18D9CC361B8C196100C79C59 /* main.m in Sources */,
 				C8A04B881BA5A63400208FA4 /* URLParser.m in Sources */,
 				18D9CC601B8C567B00C79C59 /* YQWebViewProxyDelegate.m in Sources */,

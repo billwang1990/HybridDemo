@@ -12,7 +12,7 @@
 #import "URLParser.h"
 #import "EditURLViewController.h"
 #import "BaseWebViewController+HandlePageAction.h"
-
+#import "MLKMenuPopover.h"
 @interface BaseWebViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
@@ -31,6 +31,7 @@
     [self.webView setCustomDelegate:self];
     [self injectNativeObject];
     [self startLoadRequest];
+    
 }
 
 - (void)didReceiveMemoryWarning {

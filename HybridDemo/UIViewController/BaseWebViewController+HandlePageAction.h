@@ -7,8 +7,11 @@
 //
 
 #import "BaseWebViewController.h"
+#import "MLKMenuPopover.h"
 
 @interface BaseWebViewController (HandlePageAction)
+
+@property (nonatomic, strong) MLKMenuPopover *menuPopover;
 
 - (void)generateRightItems:(NSArray*)items;
 - (void)handleGotoPage:(NSString*)url;

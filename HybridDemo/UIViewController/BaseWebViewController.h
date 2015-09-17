@@ -7,8 +7,8 @@
 //
 
 #import "BaseViewController.h"
-
-@interface BaseWebViewController : BaseViewController
+#import "MLKMenuPopover.h"
+@interface BaseWebViewController : BaseViewController<MLKMenuPopoverDelegate>
 
 @property (nonatomic, copy) NSString *urlStr;
 

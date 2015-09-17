@@ -11,6 +11,6 @@
 
 @interface EditURLViewController : BaseViewController
 
-@property (nonatomic, copy) void (^completeBlk)(void);
+@property (nonatomic, copy) void (^completeBlk)(NSString*);
 
 @end

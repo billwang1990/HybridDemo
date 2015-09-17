@@ -9,11 +9,9 @@
 #import "AppDelegate.h"
 #import "BaseWebViewController.h"
 #import "CommonUtil.h"
-#import "EditURLViewController.h"
 
 @interface AppDelegate ()
-@property (nonatomic, assign) NSTimeInterval interval;
-@property (nonatomic, assign) BOOL isEditing;
+
 @end
 
 @implementation AppDelegate
@@ -52,38 +50,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-
-#pragma mark Motion Detect
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    self.interval = [NSDate timeIntervalSinceReferenceDate];
-}
-
-- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-
-    if (self.isEditing) {
-        return;
-    }
-
-    self.interval = [NSDate timeIntervalSinceReferenceDate];
-
-    if ([NSDate timeIntervalSinceReferenceDate] - self.interval > 3600) {
-       //TODO:
-        __weak typeof(self) wSelf = self;
-        EditURLViewController *vc = [[EditURLViewController alloc]init];
-        vc.completeBlk = ^{
-            wSelf.isEditing = NO;
-        };
-        self.isEditing = YES;
-        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-        [self.window.rootViewController presentViewController:nav animated:YES completion:nil];
-        
-    }
 }
 
 @end

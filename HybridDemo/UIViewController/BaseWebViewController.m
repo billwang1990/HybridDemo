@@ -10,14 +10,16 @@
 #import "UIWebView+AddJavaScriptInterface.h"
 #import "AppDelegate.h"
 #import "URLParser.h"
-
-#define kNewStartWebKey @""
+#import "EditURLViewController.h"
+#import "BaseWebViewController+HandlePageAction.h"
 
 @interface BaseWebViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 //private
 @property (nonatomic, strong) NSURLConnection *connection;
+
+@property (nonatomic, assign) BOOL isEditing;
 
 @end
 
@@ -50,11 +52,18 @@
     }
 }
 
+- (void)setRightNavBarItems:(NSArray *)items
+{
+    if (items.count > 0) {
+        [self generateRightItems:items];
+    }
+}
+
 //注入对象实例
 - (void)injectNativeObject
 {
     __weak typeof(self) wSelf = self;
-    [self.webView addJavascriptInterfaces:wSelf WithName:@"CurrentVC"];
+    [self.webView addJavascriptInterfaces:wSelf WithName:@"CurrentViewController"];
 }
 
 #pragma mark UIWebView Delegate
@@ -65,40 +74,24 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    
     NSURL *url = request.URL;
-    NSURL *currUrl = self.connection.currentRequest.URL;
-    
-    if (!url.host || !currUrl.host) {
+    NSURL *currUrl = self.webView.request.URL;
+    if (!currUrl.host) {
+        return YES;
+    }
+    if (!url.host) {
+        //url maybe about:blank
         return NO;
     }
     
+    if (self.isEditing) {
+        self.isEditing = NO;
+        return YES;
+    }
+
     if (![url.host isEqualToString:currUrl.host] || ![url.path isEqualToString:currUrl.path]) {
-        
-        
-        BaseWebViewController *childVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
-        childVC.urlStr = request.URL.absoluteString;
-        
-        URLParser *parse = [[URLParser alloc]initWithURLString:childVC.urlStr];
-        NSString *val = [parse valueForVariable:@"newPage"];
-
-        if ([val isEqualToString:@"true"]) {
-            [self performSelector:@selector(changeToRootVC:) withObject:childVC afterDelay:0.5];
-            return NO;
-        }
-        else
-        {
-            if (self.navigationController) {
-                [self.navigationController pushViewController:childVC animated:YES];
-            }
-            else
-            {
-                UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:childVC];
-                [self presentViewController:nav animated:YES completion:nil];
-            }
-            return NO;
-        }
-
+        [self handleGotoPage:request.URL.absoluteString];
+        return NO;
     }
     
     return YES;
@@ -112,23 +105,14 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self hideIndicator];
-    
     self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-}
 
-- (void)changeToRootVC:(UIViewController*)vc
-{
-    AppDelegate *del = [UIApplication sharedApplication].delegate;
-    
-    del.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
-    [del.window makeKeyAndVisible];
-}
-
-- (void)setRightNavBarItems:(NSArray *)items
-{
-    if (items) {
-        
-    }
+#if DEBUG
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *filePath = [bundle pathForResource:@"test" ofType:@"js"];
+    NSString *js = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [webView stringByEvaluatingJavaScriptFromString:js];
+#endif
 }
 
 #pragma mark NSURLConnection
@@ -152,6 +136,44 @@
     if (error) {
         //error handle
     }
+}
+
+#pragma mark shake motion handle 
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (self.isEditing) {
+        return;
+    }
+    self.isEditing = YES;
+
+    typeof(self) wSelf = self;
+    EditURLViewController *vc = [[EditURLViewController alloc]init];
+    vc.completeBlk = ^(NSString*host){
+        
+        if ([host hasSuffix:@"/"]) {
+            host = [host substringToIndex:host.length - 1];
+        }
+        NSString *url = [NSString stringWithFormat:@"%@%@",host, wSelf.webView.request.URL.path?:@""];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:60*60];
+        [wSelf.webView loadRequest:request];
+    };
+    
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 

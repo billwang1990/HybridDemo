@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5A5394C40A541CC7A138357E"
-               BuildableName = "libMBProgressHUD.a"
-               BlueprintName = "MBProgressHUD"
+               BlueprintIdentifier = "B857D5FE833C27FF78BEB869"
+               BuildableName = "libPods-MBProgressHUD.a"
+               BlueprintName = "Pods-MBProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5A5394C40A541CC7A138357E"
-            BuildableName = "libMBProgressHUD.a"
-            BlueprintName = "MBProgressHUD"
+            BlueprintIdentifier = "B857D5FE833C27FF78BEB869"
+            BuildableName = "libPods-MBProgressHUD.a"
+            BlueprintName = "Pods-MBProgressHUD"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -60,6 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B857D5FE833C27FF78BEB869"
+            BuildableName = "libPods-MBProgressHUD.a"
+            BlueprintName = "Pods-MBProgressHUD"
+            ReferencedContainer = "container:Pods.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

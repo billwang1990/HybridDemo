@@ -24,7 +24,7 @@
     [button setTitle:title forState:UIControlStateNormal];
     [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     [button.titleLabel setFont:[UIFont systemFontOfSize:17]];
-    
+    [button setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
     item = [[UIBarButtonItem alloc] initWithCustomView:button];
     
     if (isLeft) {

@@ -1,3 +1,6 @@
+
+echo $KEY_PASSWORD
+echo $PROFILE_NAME
 security create-keychain -p travis ios-build.keychain
 security import ./scripts/certs/apple.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign
 security import ./scripts/certs/dist.cer -k ~/Library/Keychains/ios-build.keychain -T /usr/bin/codesign

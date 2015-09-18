@@ -1,7 +1,4 @@
 language: objective-c
-before_install:
-- brew update
-- brew install xctool
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/HbridADHoc1.mobileprovision
   -out scripts/profile/HbridADHoc1.mobileprovision.enc -a

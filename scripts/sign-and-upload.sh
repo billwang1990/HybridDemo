@@ -11,3 +11,7 @@ PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_
 OUTPUTDIR="$PWD/build/Release-iphoneos"
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
+
+fir p $OUTPUTDIR/$APPNAME.ipa -T $FIR_APP_TOKEN
+RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
+RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"

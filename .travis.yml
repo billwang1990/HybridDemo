@@ -1,0 +1,26 @@
+language: objective-c
+before_install:
+- brew update
+- brew install xctool
+before_script:
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/HbridADHoc1.mobileprovision
+  -out scripts/profile/HbridADHoc1.mobileprovision.enc -a
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer -out scripts/certs/dist.cer.enc
+  -a
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12 -out scripts/certs/dist.cer.p12
+  -a
+- ./scipts/add-key.sh
+script:
+- xctool -workspace HybridDemo.xcworkspace -scheme HybridDemo -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
+after_success:
+- ./scripts/sign-and-upload.sh
+after_script:
+- ./scripts/remove-key.sh
+
+env:
+  global:
+  - APP_NAME="HybridDemo"
+  - 'DEVELOPER_NAME="iPhone Distribution: qi ming dong"'
+  - PROFILE_NAME="HbridADHoc1"
+  - secure: nHFybeqax9gP5QpYkceONDSBt65Emphx+EysbsWR1+0aio5IeCQFX/bITyR34WdKJRfjRmC7CRq34oUE3QV0GLJzmbpq3Jfjm+qohosafNzRlXHLmndFfG4v1FKA5O6RtPQ7QVc9nOlzjUlij5wWkCgVGKUCSFvc0NRXiMTZ6RMXRf1cY0meX5gE6DWCpoTCD+dDgXHxRq/S0jlYg4YOIpx52YrbTdJOIO3FMVLGkbLLUo+USsaVkWBEP7byGlK4UkEqOpC33y+SVv6QtFAtnAXy5myS6sO9SVpb3TOXY5ncMynUb0sgllRdO6zGRf2GHs/8CWs5jVObg7st5S+303JDDcCaiYYK8FMOaIC80AoYYStDFDnDE7mgaZYK5yhdtvoxjc/GUG8554w7L7bd2fZuVpB/LGPn1cRkWM/x0/lc7M2dphz9Lqbp3OqwLSM51m3TiaWr32OhSVzCGollZCPo12fZC/L0kSg1ymhBE2MfvW+yXvQ+nCEz7QfcMV5xOPVHuKYNP4y7dSsG/DeMqbCZOp/9T93xse+3zuCULtvEbI1roVyA4Dglwmd8wScYu/RH10z1mXXUKg2V0Wshh0exT4zPomonjCQ5+tYNzIhbhseLTASgMwP6dWBu2RXpK2LlxOxPzSFHupFE5CF5XStrqygoKRhvbYeSoIXOzvE=
+  - secure: NnCR3/RQ2EOuFxshpybGkz7WGN1+7lH1KSN2tTJW3rd2qFpT7u9jLc8Yv0+F9YZS8SvvijWzgpnQVSNYPk3s9otEqvgaLi+2AagZoCD1zCoGgXI0t3RHoU4BJJ2X7C4TA5R0k6qg8oVD13sXWLp2Y2TlFfgc/auSYYOaW2liaqizHFLQzh03w4AsKLMr6qqXPbnmBsNH0A/robXub0G+fj6OVsc+tCnbdqTNl0bn0P/v1GLTnABk/c4/Z2RNJ/GNyGGd6KGQbd2VMS943sz+GbS1pkJAdrkSSvj29RVV/FVkZBUmKMW4+bB60f1y0dXMp1qv+3Wy+ZahfE7qg5P/AQqm4j6K3QbUJpyr8HwA9O1DVXfhd1eKR8eXonVjkSvOXZxw+zADdIY1WG/UywAqzpG3/6YYnV+KE5+KyY/Xzlg4ZpoXskkIF9RhEca/+Q0Y68GtdIe+KfmlMajE4bq0hPVb6AMCAGqa5pr1ssl6TwW0Yqp3jYe7lElt6LQnWOO6zf4tRCIPx8nercc83+D2NJRsmPk228+j0gJiZBb0aD/LJ1Oz/kZAA8i8SjlNSmqeVO3ZVna/V3J4a+uiqMqh1fw8p+xHpK1Madk9ed6oDkOxmPhFXd+1QyfPvpaBPI6OtmY4etMqBfM0CmKozjf1MRRmrL4PVtEa7vc78Orzh1I=

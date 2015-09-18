@@ -578,7 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "billwang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4e3c869e-9aea-463c-8c0c-a21e2c9e92e7";
 			};
 			name = Debug;
 		};
@@ -597,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "billwang.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "4e3c869e-9aea-463c-8c0c-a21e2c9e92e7";
 			};
 			name = Release;
 		};

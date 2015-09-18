@@ -49,7 +49,7 @@ static void *kMenuKey = &kMenuKey;
     
     NSArray *items = objc_getAssociatedObject(self, kMenuKey);
     NSMutableArray *names = [[NSMutableArray alloc]initWithCapacity:items.count];
-    [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [items enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         [names addObject:obj[@"name"]];
     }];
     self.menuPopover = [[MLKMenuPopover alloc]initWithFrame:CGRectMake(185, 0, 130, 40*items.count + 4)

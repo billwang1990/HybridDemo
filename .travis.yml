@@ -3,14 +3,14 @@ before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/HbridADHoc1.mobileprovision.enc -d -a -out scripts/profile/HbridADHoc1.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
-- "./scipts/add-key.sh"
+- ./scripts/add-key.sh
 script:
 - xctool -workspace HybridDemo.xcworkspace -scheme HybridDemo -sdk iphoneos -configuration
   Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
 after_success:
-- "./scripts/sign-and-upload.sh"
+- ./scripts/sign-and-upload.sh
 after_script:
-- "./scripts/remove-key.sh"
+- ./scripts/remove-key.sh
 env:
   global:
   - APP_NAME="HybridDemo"

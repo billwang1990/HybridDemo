@@ -1,4 +1,6 @@
 language: objective-c
+before_install:
+- gem install fir-cli --no-ri --no-rdoc
 before_script:
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/profile/HbridADHoc1.mobileprovision.enc -d -a -out scripts/profile/HbridADHoc1.mobileprovision
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer

@@ -21,9 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#ifdef DEBUG
-    [self loadReveal];
-#endif
+//#ifdef DEBUG
+//    [self loadReveal];
+//#endif
     BaseWebViewController *rootVC = [[BaseWebViewController alloc] initWithNibName:@"BaseWebViewController" bundle:nil];
     rootVC.urlStr = [CommonUtil baseURL];
     

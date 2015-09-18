@@ -27,11 +27,6 @@
 		C8C600071BAA65AA0067F932 /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = C8C600061BAA65AA0067F932 /* test.js */; settings = {ASSET_TAGS = (); }; };
 		C8C6000D1BAA94390067F932 /* BaseWebViewController+HandlePageAction.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C6000C1BAA94390067F932 /* BaseWebViewController+HandlePageAction.m */; settings = {ASSET_TAGS = (); }; };
 		C8C600101BAAAC7F0067F932 /* MLKMenuPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C6000F1BAAAC7F0067F932 /* MLKMenuPopover.m */; settings = {ASSET_TAGS = (); }; };
-		C8C600141BAAB5690067F932 /* libReveal.dylib in Resources */ = {isa = PBXBuildFile; fileRef = C8C600131BAAB5350067F932 /* libReveal.dylib */; };
-		C8C600161BAAB5780067F932 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C600151BAAB5780067F932 /* libz.tbd */; };
-		C8C600181BAAB5800067F932 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C600171BAAB5800067F932 /* CFNetwork.framework */; };
-		C8C6001A1BAAB58C0067F932 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C600191BAAB58C0067F932 /* QuartzCore.framework */; };
-		C8C6001C1BAAB5940067F932 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8C6001B1BAAB5940067F932 /* CoreGraphics.framework */; };
 		C8C600241BAAB6700067F932 /* DefaultLine.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C6001F1BAAB6700067F932 /* DefaultLine.png */; settings = {ASSET_TAGS = (); }; };
 		C8C600251BAAB6700067F932 /* Menu_PopOver_BG.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C600201BAAB6700067F932 /* Menu_PopOver_BG.png */; settings = {ASSET_TAGS = (); }; };
 		C8C600261BAAB6700067F932 /* Menu_PopOver_BG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8C600211BAAB6700067F932 /* Menu_PopOver_BG@2x.png */; settings = {ASSET_TAGS = (); }; };
@@ -90,11 +85,6 @@
 		C8C6000C1BAA94390067F932 /* BaseWebViewController+HandlePageAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BaseWebViewController+HandlePageAction.m"; path = "UIViewController/BaseWebViewController+HandlePageAction.m"; sourceTree = "<group>"; };
 		C8C6000E1BAAAC7F0067F932 /* MLKMenuPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLKMenuPopover.h; path = Views/MenuPopover/MLKMenuPopover.h; sourceTree = "<group>"; };
 		C8C6000F1BAAAC7F0067F932 /* MLKMenuPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLKMenuPopover.m; path = Views/MenuPopover/MLKMenuPopover.m; sourceTree = "<group>"; };
-		C8C600131BAAB5350067F932 /* libReveal.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libReveal.dylib; sourceTree = "<group>"; };
-		C8C600151BAAB5780067F932 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C8C600171BAAB5800067F932 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		C8C600191BAAB58C0067F932 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C8C6001B1BAAB5940067F932 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C8C6001F1BAAB6700067F932 /* DefaultLine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultLine.png; path = Views/MenuPopover/Images/DefaultLine.png; sourceTree = "<group>"; };
 		C8C600201BAAB6700067F932 /* Menu_PopOver_BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Menu_PopOver_BG.png; path = Views/MenuPopover/Images/Menu_PopOver_BG.png; sourceTree = "<group>"; };
 		C8C600211BAAB6700067F932 /* Menu_PopOver_BG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu_PopOver_BG@2x.png"; path = "Views/MenuPopover/Images/Menu_PopOver_BG@2x.png"; sourceTree = "<group>"; };
@@ -107,10 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C6001C1BAAB5940067F932 /* CoreGraphics.framework in Frameworks */,
-				C8C6001A1BAAB58C0067F932 /* QuartzCore.framework in Frameworks */,
-				C8C600181BAAB5800067F932 /* CFNetwork.framework in Frameworks */,
-				C8C600161BAAB5780067F932 /* libz.tbd in Frameworks */,
 				EE5F0D71956DE152BBD04740 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,11 +244,6 @@
 		D9AEA395908BB30AB1907001 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C8C6001B1BAAB5940067F932 /* CoreGraphics.framework */,
-				C8C600191BAAB58C0067F932 /* QuartzCore.framework */,
-				C8C600171BAAB5800067F932 /* CFNetwork.framework */,
-				C8C600151BAAB5780067F932 /* libz.tbd */,
-				C8C600131BAAB5350067F932 /* libReveal.dylib */,
 				053D96A55F768A40BC50331B /* libPods.a */,
 			);
 			name = Frameworks;
@@ -280,7 +261,6 @@
 				18D9CC2D1B8C196100C79C59 /* Frameworks */,
 				18D9CC2E1B8C196100C79C59 /* Resources */,
 				8C7CBC159077515BC97278C7 /* Copy Pods Resources */,
-				C8C6001D1BAAB5A50067F932 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -352,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8C600141BAAB5690067F932 /* libReveal.dylib in Resources */,
 				C8C600071BAA65AA0067F932 /* test.js in Resources */,
 				18D9CC6A1B8C580B00C79C59 /* BaseWebViewController.xib in Resources */,
 				18D9CC3F1B8C196100C79C59 /* Main.storyboard in Resources */,
@@ -406,19 +385,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		C8C6001D1BAAB5A50067F932 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nif [ -n \"${CODE_SIGN_IDENTITY}\" ]; then\ncodesign -fs \"${CODE_SIGN_IDENTITY}\" \"${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}/libReveal.dylib\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

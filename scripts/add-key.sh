@@ -1,13 +1,4 @@
 
-openssl aes-256-cbc -k "qwe" -in scripts/profile/HbridADHoc1.mobileprovision.enc -d -a -out scripts/profile/HbridADHoc1.mobileprovision
-openssl aes-256-cbc -k "qwe" -in scripts/certs/dist.cer.enc -d -a -out scripts/certs/dist.cer
-openssl aes-256-cbc -k "qwe" -in scripts/certs/dist.p12.enc -d -a -out scripts/certs/dist.p12
-security delete-keychain ios-build.keychain
-export KEY_PASSWORD="qwe"
-export PROFILE_NAME="HbridADHoc1"
-
-
-
 echo $KEY_PASSWORD
 echo $PROFILE_NAME
 

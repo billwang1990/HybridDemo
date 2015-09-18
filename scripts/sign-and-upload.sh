@@ -15,6 +15,7 @@ OUTPUTDIR="$PWD/build/Release-iphoneos"
 echo $OUTPUTDIR
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 ls $OUTPUTDIR
+echo "billwang1990.github.io"
 fir p $OUTPUTDIR/$APPNAME.ipa -T $FIR_APP_TOKEN
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"

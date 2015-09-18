@@ -5,33 +5,68 @@
 	<key>files</key>
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
-		<data>
-		DmU8fHrzORAnYmv2JDHKfSETQEY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			DmU8fHrzORAnYmv2JDHKfSETQEY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vXZ-lx-hvc~iphone.nib/objects-8.0+.nib</key>
-		<data>
-		TWx1QG/e+AJwAINN7Az6kMf5BOA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			TWx1QG/e+AJwAINN7Az6kMf5BOA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vXZ-lx-hvc~iphone.nib/runtime.nib</key>
-		<data>
-		Q5PlP34B700kxSbSv68kSfArYUI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Q5PlP34B700kxSbSv68kSfArYUI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS~iphone.nib/objects-8.0+.nib</key>
-		<data>
-		SE0r+hIQWQbLavkkvdhGoaRWzhQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			SE0r+hIQWQbLavkkvdhGoaRWzhQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS~iphone.nib/runtime.nib</key>
-		<data>
-		bSuLB+mNoCN5aW1rLyVQICcYN20=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bSuLB+mNoCN5aW1rLyVQICcYN20=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main~iphone.storyboardc/Info-8.0+.plist</key>
-		<data>
-		Jmu6F/QDeWUyQljt5m/23hAkmcs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jmu6F/QDeWUyQljt5m/23hAkmcs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main~iphone.storyboardc/Info.plist</key>
-		<data>
-		Jmu6F/QDeWUyQljt5m/23hAkmcs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jmu6F/QDeWUyQljt5m/23hAkmcs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>BaseWebViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
 		E1wFCvREhAgU7axI5qL+BmIByLk=
@@ -44,6 +79,10 @@
 		<data>
 		Vw6eArD+gQQ/0tB/WoygtngxxAw=
 		</data>
+		<key>Info.plist</key>
+		<data>
+		GJDep7UNB1qz4x1N1nH7Twcb1e0=
+		</data>
 		<key>Menu_PopOver_BG.png</key>
 		<data>
 		0NCqe0SECXA8GoKM0BCAUeUjHW8=
@@ -55,6 +94,10 @@
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>ResourceRules.plist</key>
+		<data>
+		lwspKkpks/znbeAxH6w3tE+gCNg=
 		</data>
 		<key>YQAddJSInterface.js</key>
 		<data>
@@ -84,33 +127,68 @@
 	<key>files2</key>
 	<dict>
 		<key>Base.lproj/LaunchScreen.nib</key>
-		<data>
-		DmU8fHrzORAnYmv2JDHKfSETQEY=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			DmU8fHrzORAnYmv2JDHKfSETQEY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vXZ-lx-hvc~iphone.nib/objects-8.0+.nib</key>
-		<data>
-		TWx1QG/e+AJwAINN7Az6kMf5BOA=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			TWx1QG/e+AJwAINN7Az6kMf5BOA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-vXZ-lx-hvc~iphone.nib/runtime.nib</key>
-		<data>
-		Q5PlP34B700kxSbSv68kSfArYUI=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Q5PlP34B700kxSbSv68kSfArYUI=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS~iphone.nib/objects-8.0+.nib</key>
-		<data>
-		SE0r+hIQWQbLavkkvdhGoaRWzhQ=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			SE0r+hIQWQbLavkkvdhGoaRWzhQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main.storyboardc/vXZ-lx-hvc-view-kh9-bI-dsS~iphone.nib/runtime.nib</key>
-		<data>
-		bSuLB+mNoCN5aW1rLyVQICcYN20=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			bSuLB+mNoCN5aW1rLyVQICcYN20=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main~iphone.storyboardc/Info-8.0+.plist</key>
-		<data>
-		Jmu6F/QDeWUyQljt5m/23hAkmcs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jmu6F/QDeWUyQljt5m/23hAkmcs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>Base.lproj/Main~iphone.storyboardc/Info.plist</key>
-		<data>
-		Jmu6F/QDeWUyQljt5m/23hAkmcs=
-		</data>
+		<dict>
+			<key>hash</key>
+			<data>
+			Jmu6F/QDeWUyQljt5m/23hAkmcs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 		<key>BaseWebViewController~iphone.nib/objects-8.0+.nib</key>
 		<data>
 		E1wFCvREhAgU7axI5qL+BmIByLk=
@@ -131,9 +209,9 @@
 		<data>
 		/W3l7notzv5EHS+XA+3U19jeLSY=
 		</data>
-		<key>PkgInfo</key>
+		<key>ResourceRules.plist</key>
 		<data>
-		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		lwspKkpks/znbeAxH6w3tE+gCNg=
 		</data>
 		<key>YQAddJSInterface.js</key>
 		<data>
@@ -162,47 +240,97 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>.*</key>
+		<key>^</key>
 		<true/>
-		<key>^Info.plist$</key>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
-			<real>10</real>
+			<real>1100</real>
 		</dict>
-		<key>^ResourceRules.plist$</key>
-		<dict>
-			<key>omit</key>
-			<true/>
-			<key>weight</key>
-			<real>100</real>
-		</dict>
+		<key>^version.plist$</key>
+		<true/>
 	</dict>
 	<key>rules2</key>
 	<dict>
-		<key>.*</key>
-		<true/>
+		<key>.*\.dSYM($|/)</key>
+		<dict>
+			<key>weight</key>
+			<real>11</real>
+		</dict>
+		<key>^</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^(.*/)?\.DS_Store$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>2000</real>
+		</dict>
 		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
 		<dict>
 			<key>nested</key>
 			<true/>
 			<key>weight</key>
-			<real>0.0</real>
+			<real>10</real>
 		</dict>
-		<key>^Info.plist$</key>
+		<key>^.*</key>
+		<true/>
+		<key>^.*\.lproj/</key>
+		<dict>
+			<key>optional</key>
+			<true/>
+			<key>weight</key>
+			<real>1000</real>
+		</dict>
+		<key>^.*\.lproj/locversion.plist$</key>
 		<dict>
 			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>1100</real>
+		</dict>
+		<key>^Info\.plist$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^PkgInfo$</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>20</real>
+		</dict>
+		<key>^[^/]+$</key>
+		<dict>
+			<key>nested</key>
 			<true/>
 			<key>weight</key>
 			<real>10</real>
 		</dict>
-		<key>^ResourceRules.plist$</key>
+		<key>^embedded\.provisionprofile$</key>
 		<dict>
-			<key>omit</key>
-			<true/>
 			<key>weight</key>
-			<real>100</real>
+			<real>20</real>
+		</dict>
+		<key>^version\.plist$</key>
+		<dict>
+			<key>weight</key>
+			<real>20</real>
 		</dict>
 	</dict>
 </dict>

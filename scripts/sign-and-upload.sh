@@ -21,20 +21,15 @@ OUTPUTDIR="$PWD/build/Release-iphoneos"
 echo "***************************"
 echo "*        Signing          *"
 echo "***************************"
-
 echo $PWD
-ls $PWD
-echo "hahahaha"
-ls $PWD/build
+echo "OUTPUTDIR is"
+echo $OUTPUTDIR
 ls $OUTPUTDIR
 echo "***************************"
 echo "*        Signing 1         *"
 echo "***************************"
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
-echo "======================="
-echo "billwang1990.github.io"
-echo "======================="
 fir p $OUTPUTDIR/$APP_NAME.ipa -T $FIR_APP_TOKEN
 
 curl -F "file=@$OUTPUTDIR/$APP_NAME.ipa" \

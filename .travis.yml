@@ -11,7 +11,8 @@ before_script:
   -out scripts/certs/dist.p12
 - "./scripts/add-key.sh"
 script:
-- xctool -workspace HybridDemo.xcworkspace -scheme HybridDemo -sdk iphoneos -configuration Release ONLY_ACTIVE_ARCH=NO
+- xctool -workspace HybridDemo.xcworkspace -scheme HybridDemo -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+
 after_success:
 - "./scripts/sign-and-upload.sh"
 after_script:

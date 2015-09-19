@@ -19,7 +19,7 @@ echo $OUTPUTDIR
 echo "DEVELOPER_NAME is ："
 echo $DEVELOPER_NAME
 
-xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" 
+xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 ls $OUTPUTDIR
 echo "billwang1990.github.io"
 fir p $OUTPUTDIR/$APP_NAME.ipa -T $FIR_APP_TOKEN

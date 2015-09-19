@@ -20,7 +20,6 @@ after_script:
 env:
   global:
   - APP_NAME="HybridDemo"
- # - DEVELOPER_NAME="iPhone Distribution: qi ming Dong"
   - 'DEVELOPER_NAME="iPhone Distribution: qi ming Dong (K28PMLN2Q3)"'
   - PROFILE_NAME="HbridADHoc1"
   - secure: WksyubO79HdaQ5lB+UA4MvRCt9nYYLm0NIO7lLjUQbmJehAHeFZolPgvcKNTIQ4TJODf7JH6Zq2aVgoyGbVgaA1FKMo0Zyu7GbDoxGVZmOFKLy1V3FxR2qLZlQhj7YdYmV+bwZqVvaEXOvSewAwGSOVk4ECI8Z6qycEi8lPkamPi9bKVlp/2Os0ln78JN69KxtR0cPmPoA6YQWtO0Odjryja3B3mU28ukfPcShRs479MFfsEDFlpfb33Di09WUqhJ5+Ft2IIXu28wO/w2fMl6zsPSHMmFg8FEpOgnAQ4a2RMesAdgbSW8E6+N1wsr5V2QLiDj7v0FOJ+9jwvgRvOf532/Z9TONnnJh/5UUfyXmxtvsQ1BaLEma16y5Oc5D8+FkhJpWGcdiIC629e36xLihSmT/elbpKyEyRIwPyxRVXEf5/gB6OGOIsre/QYlAqJkdEtTVZwAHk3VIP0lEYLrszK67hQcf2GNWYApSCTAPFRcYp9gOzj83+jqhd1e6y7NpXeOkfNFamJ6ZGr6FhvJqeX5enqdHyAITaDyqvTH0Ngwiq2J6F6sZ5XcMsz311aW+7tQjo2+tN7koG+aZ5Z5G1I2v+/gvLqkcoyKlaOUjy4L4NNfho3VPbuAvN8ApxZfT8EQ0hQ31g2rS6h2bwRvwgurtmS6Tm05TS4HWBiuH4=

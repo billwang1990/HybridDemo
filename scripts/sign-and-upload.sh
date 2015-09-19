@@ -12,16 +12,18 @@ exit 0
 fi
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME.mobileprovision"
 
-echo $PROVISIONING_PROFILE
+# echo $PROVISIONING_PROFILE
 
 OUTPUTDIR="$PWD/build/Release-iphoneos"
-echo $OUTPUTDIR
-echo "DEVELOPER_NAME is ："
-echo $DEVELOPER_NAME
+# echo $OUTPUTDIR
+# echo "DEVELOPER_NAME is ："
+# echo $DEVELOPER_NAME
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 ls $OUTPUTDIR
+echo "======================="
 echo "billwang1990.github.io"
+echo "======================="
 fir p $OUTPUTDIR/$APP_NAME.ipa -T $FIR_APP_TOKEN
 
 curl -F "file=@$OUTPUTDIR/$APP_NAME.ipa" \

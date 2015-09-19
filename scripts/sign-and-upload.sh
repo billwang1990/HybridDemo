@@ -23,9 +23,9 @@ echo $PWD
 ls $PWD
 echo "hahahaha"
 ls $PWD/build
+ls $OUTPUTDIR
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
-ls $OUTPUTDIR
 echo "======================="
 echo "billwang1990.github.io"
 echo "======================="

@@ -128,6 +128,7 @@ static void *kMenuKey = &kMenuKey;
 {
     [self.menuPopover dismissMenuPopover];
     NSArray *actions = objc_getAssociatedObject(self, kMenuKey);
+
     NSDictionary *obj = [actions objectAtIndex:selectedIndex];
     [self gotoPage:obj[@"action"]];
 }

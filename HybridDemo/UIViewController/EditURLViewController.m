@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"修改主机";
+    
     [self.navigationItem setNavigationBarItemWithTitle:@"保存" andTarget:self action:@selector(save) isLeftItem:NO];
     [self.navigationItem setNavigationBarItemWithTitle:@"返回" andTarget:self action:@selector(dismissSelf) isLeftItem:YES];
     
